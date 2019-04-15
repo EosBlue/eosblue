@@ -76,14 +76,14 @@ def shuffle_card(seed1, seed2):
 
 if __name__ == '__main__':
 
-    block_hash  = "03246dfdc310b823b785c45759224744b19f2cd6da02ed2c14d9c99981045e24"
-    server_seed   = "03246dfdc310b823b785c45759224744"
-    player_seed = "b19f2cd6da02ed2c14d9c99981045e24"
+    block_hash    = "03246dfdc310b823b785c45759224744b19f2cd6da02ed2c14d9c99981045e24"
+    server_seed   = "6a4e7c1b225820d502444a74b01f8285"
+    player_seed   = "0e08ca9aa18e3b7538d36917b6de5561"
     
     #shuffle cards use block_hash
-    cards1, sha512_digest1 = shuffle_card(server_seed, block_hash[32:])
-    cards2, sha512_digest2 = shuffle_card(server_seed, player_seed)
-
+    cards1, sha512_digest1 = shuffle_card(server_seed, player_seed)
+    cards2, sha512_digest2 = shuffle_card(server_seed, block_hash[32:])
+    
     print 'game seed:', server_seed
     print 'player seed:', player_seed
     print 'block hash:', block_hash
